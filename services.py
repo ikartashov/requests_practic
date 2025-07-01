@@ -64,12 +64,12 @@ def main():
 
         elif choice == '2':
             name = input('Введите имя: ')
-            user_name = input('Введите имя пользователя: ')
+            username = input('Введите имя пользователя: ')
             email = input('Введите email пользователя: ')
 
             data = {
                 'name': name,
-                'username': user_name,
+                'username': username,
                 'email': email
             }
             create_user(data)
@@ -77,11 +77,14 @@ def main():
         elif choice == '3':
             user_id = input('Введите ID пользователя для обновления данных:')
             name = input("Новое имя (оставьте пустым, если не менять): ")
+            username = input('Новое имя пользователя (оставьте пустым, если не менять): ')
             email = input("Новый email (оставьте пустым, если не менять): ")
 
             updated_data = {}
             if name:
                 updated_data['name'] = name
+            if username:
+                updated_data['username'] = username
             if email:
                 updated_data['email'] = email
 
@@ -104,5 +107,4 @@ def main():
             continue
 
 
-if __name__ == '__main__':
-    main()
+
