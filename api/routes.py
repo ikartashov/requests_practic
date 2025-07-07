@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException, Body
 from fastapi.responses import HTMLResponse
-from services import get_user,create_user, update_user, delete_user
+from app.services import get_user,create_user, update_user, delete_user
 from pydantic import BaseModel
 from typing import Optional
 
